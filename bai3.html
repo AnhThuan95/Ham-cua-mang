@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinh dang chu</title>
+</head>
+
+<style>
+    body {padding-top:50px}
+</style>
+
+<body>
+
+<h3>Day la chuong trinh chuyen tu chu hoa sang chu thuong va nguoc lai</h3>
+<input type="text" id="str">
+<input type="button" value="Chuyen doi" onclick="chuyenDoi()">
+<p id="result"></p>
+
+<script>
+    function chuyenDoi() {
+        let str = document.getElementById("str").value;
+        let result = [];
+
+        for (let i = 0; i < str.length; i++) {
+            if(str[i] == str[i].toUpperCase()){
+                result.push(str[i].toLowerCase());
+            } else {
+                result.push(str[i].toUpperCase());
+            }
+        }
+        document.getElementById("result").innerHTML = result.join("");
+    }
+</script>
+
+</body>
+</html>
